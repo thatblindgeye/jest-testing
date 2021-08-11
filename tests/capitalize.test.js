@@ -1,11 +1,15 @@
 import capitalize from '../scripts/capitalize';
 
 describe('Capitalize', function () {
-  test('"this is a test" returns "This is a test."', function () {
+  test('handles multiple words, e.g. "this is a test"', function () {
     expect(capitalize('this is a test.')).toBe('This is a test.');
   });
 
-  test('"" returns ""', function () {
+  test('handles a single word, e.g. "test"', function () {
+    expect(capitalize('test.')).toBe('Test.');
+  });
+
+  test('handles empty strings', function () {
     expect(capitalize('')).toBe('');
   });
 
