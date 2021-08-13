@@ -4,8 +4,9 @@ export default function analyzeArray(array) {
   }
 
   const sortedNums = array.sort((a, b) => a - b);
-  const average =
-    array.reduce((current, prev) => current + prev) / array.length;
+  const average = array.reduce((accumulator, current) => {
+    return (accumulator + current) / array.length;
+  });
 
   return {
     average,

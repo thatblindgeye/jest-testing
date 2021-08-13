@@ -13,6 +13,24 @@ describe('Array Analysis', function () {
     expect(analyzeArray(input)).toEqual(output);
   });
 
+  test('handles 0', function () {
+    const input = [4, 0, 3, 8, 5];
+    const output = { average: 4, min: 0, max: 8, length: 5 };
+    expect(analyzeArray(input)).toEqual(output);
+  });
+
+  test('handles array of a single number repeated', function () {
+    const input = [5, 5, 5, 5, 5];
+    const output = { average: 5, min: 5, max: 5, length: 5 };
+    expect(analyzeArray(input)).toEqual(output);
+  });
+
+  test('handles negative numbers', function () {
+    const input = [-2, -9, -5, -4];
+    const output = { average: -5, min: -9, max: -2, length: 4 };
+    expect(analyzeArray(input)).toEqual(output);
+  });
+
   test('handles floating point as average', function () {
     const input = [9, 4, 2, 3];
     const output = { average: 4.5, min: 2, max: 9, length: 4 };
