@@ -1,4 +1,3 @@
-import { expect } from '@jest/globals';
 import analyzeArray from '../scripts/arrayAnalysis';
 
 describe('Array Analysis', function () {
